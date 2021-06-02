@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scrollbar-width: none;
+}
+body {
+  font-family: "Source code pro";
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+#cover {
+  background: #845ec2;
+}
+
+#about {
+  background: #4b4453;
+}
+
+#contact {
+  background: #b0a8b9;
+}
+
+#work {
+  background: #00896f;
+}
+
+#projects {
+  background: #00c0a3;
+}
+
+.block-appear.block-appear-active {
+  animation: popIn 1s ease-in;
+}
+
+.block-enter.block-enter-active {
+  animation: popIn 1s ease-in;
+}
+
+.block-exit-active {
+  animation: popOut 750 ease-in;
+}
+
+@keyframes popIn {
+  0% {
+    transform: translate(-100%, 0%) scale(0.25);
+  }
+  50% {
+    transform: translate(0%, 0%) scale(0.25);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+@keyframes popOut {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  50% {
+    transform: translate(0%, 0%) scale(0.25);
+  }
+  100% {
+    transform: translate(100%, 0%) scale(0.25);
+  }
+}
